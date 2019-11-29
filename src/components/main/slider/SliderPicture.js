@@ -3,7 +3,7 @@ import React from "react";
 
 const SliderPicture = (props) => {
     const { slidesArray, currentSlide } = props;
-    console.log(currentSlide)
+    
     return(
         <div className="sliderPicture_container">
             <div className="sliderPicture_rowOfPictures" style={{transform: `translateX(-${currentSlide * 100}%)`}}>

@@ -17,6 +17,8 @@ const SliderContent = (props) => {
                             <p className="sliderContent_description">{slide.description}</p>
                             <div className="sliderContent_decoration_white"></div>
                             <h3 className="sliderContent_roles">Roles: {slide.roles}</h3>
+                            <div className="sliderContent_btn"><a href={slide.website_url} target="_blank">VIEV</a></div>
+                            <div className="sliderContent_numberBG" style={{backgroundImage: `url(${slide.number_url})`}}></div>
                             </>
                         )
                     }
