@@ -6,6 +6,7 @@ import Gallery from './components/gallery/Gallery';
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <div className="app_block"></div>
       <Main />
       <Gallery />
+      
     </div>
   );
 }

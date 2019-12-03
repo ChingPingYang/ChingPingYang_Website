@@ -19,7 +19,7 @@ class Navbar extends Component {
                 {
                     name: 'MORE',
                     id: 3,
-                    url: '#'
+                    url: '#gallery'
                 }
             ]
         }
