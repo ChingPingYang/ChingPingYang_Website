@@ -481,24 +481,73 @@ body {
         width: 100%;
         height: 100%;
         padding: 50px 0px;
-        overflow: auto;
+        overflow: scroll;
         background-color: rgba(0,0,0,0.4);
 
         .modal_content {
             width: 80%;
             min-height: 100vh;
             margin: auto;
+            position: relative;
             display: flex;
             flex-direction: column;
             padding: 20px;
             background-color: $prim_white;
+            box-shadow: 0px 0px 30px -13px rgba($color: #0f1dec, $alpha: 0.7);
+            .modal_cross_container {
+                position: absolute;
+                width: 1.8rem;
+                height: 1.8rem;
+                top: 20px;
+                right: 20px;
+                color: $prim_gray;
+                cursor: pointer;
+                // border: rgb(255, 81, 0) solid 1px;
+                .modal_crossBody {
+                    width: 120%;
+                    height: 0.2rem;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    background-color: $prim_gray;
+                    border-radius: 50px;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-in-out;
+                    &.top {
+                        transition-delay: 0.05s;
+                        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                    }
+                    &.bottom {
+                        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+                    }
+                }
+                &:hover .top {
+                    background-color: $prim_blue;
+                    transform: translateX(-50%) translateY(-50%) rotate(135deg);
+                }
+                &:hover .bottom {
+                    background-color: $prim_blue;
+                    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                }
+            }
+
+            .modal_description_container {
+                // border: rgb(255, 81, 0) solid 1px;
+                margin-top: 30px;
+                width: 90%;
+                line-height: 1.8rem;
+                h3 {
+                    color: $prim_blue;
+                    font-size: $paragraph;
+                }
+            }
+
             .modal_img {
                 width: 100%;
-                height: 500px;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-image: url('../src/components/main/images/project2_bg.jpg');
+                height: 100%;
+                margin: 20px 0px;
+                
             }
         }
     }

@@ -47,10 +47,12 @@ class Gallery extends Component {
     }
 
     handleCloseModal = (e) => {
-        if(e.target.className === "modal_container") {
+        console.log(e.target.className)
+        if(e.target.className === "modal_container" || e.target.className === "modal_cross_container" || e.target.className === "modal_crossBody bottom" || e.target.className === "modal_crossBody top") {
             this.setState({
                 modalOpen: false
             })
+            e.target.scrollTop = 0
         }
     }
 
