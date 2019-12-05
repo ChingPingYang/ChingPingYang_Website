@@ -10,7 +10,7 @@ const Link = (props) => {
     }
     return (
         <li className="link_li">
-            <a ref={(el)=>{aTag = el}}
+            <a ref={(el)=> aTag = el}
                onMouseEnter={handleMouseEvent} 
                onMouseLeave={handleMouseEvent}
                href={url} >

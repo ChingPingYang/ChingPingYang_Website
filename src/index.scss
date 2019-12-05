@@ -23,7 +23,7 @@ html, body {
     scroll-behavior: smooth;
 }
 body {
-    background-color: $prim_blue;
+    background-color: #6183dc;    
 }
 
 
@@ -58,7 +58,13 @@ body {
             height: 45px;
             background: url(./components/header/images/logo.svg) no-repeat;
             background-position: center;
+            position: relative;
             
+            .nav_logo_link {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
         }
 
         ul {
@@ -248,6 +254,7 @@ body {
 .app_block {
     width: 100%;
     height: 15vh;
+    background-color: $prim_blue;
 }
 
 //-------------------------------------------- Main --------------------------------------------//
@@ -325,6 +332,7 @@ body {
                     font-size: $title;
                     font-family: $titleFont;
                     font-weight: 400;
+                    
                 }
             }
             .sliderContent_decoration_yellow {
@@ -387,6 +395,7 @@ body {
                 background-size: contain;
                 background-position: right;        
                 position: absolute;
+                
             }
         }
     }
@@ -514,7 +523,7 @@ body {
             position: relative;
             display: flex;
             flex-direction: column;
-            padding: 20px;
+            padding: 10px 20px 0px 20px;
             background-color: $prim_white;
             box-shadow: 0px 0px 30px -13px rgba($color: #0f1dec, $alpha: 0.7);
             .modal_cross_container {
@@ -525,7 +534,6 @@ body {
                 right: 20px;
                 color: $prim_gray;
                 cursor: pointer;
-                // border: rgb(255, 81, 0) solid 1px;
                 .modal_crossBody {
                     width: 120%;
                     height: 0.2rem;
@@ -556,8 +564,7 @@ body {
             }
 
             .modal_description_container {
-                // border: rgb(255, 81, 0) solid 1px;
-                margin: 30px 0px 15px 0px;
+                margin: 30px 0px 10px 0px;
                 width: 90%;
                 line-height: 1.8rem;
                 h3 {
@@ -576,4 +583,15 @@ body {
     }
 }
 
+//-------------------------------------------- Footer --------------------------------------------//
 
+.footer_container {
+    width: 100%;
+    height: 50px;
+    background-color: $prim_blue;
+    .footer_copyright {
+        font-weight: 100;
+        font-size: 11px;
+        color: #8da5e2;
+    }
+}

@@ -76,7 +76,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className={this.forNavStatus()}>
-                <div className="nav_logo"></div>
+                <div className="nav_logo"><a className="nav_logo_link" href="#"></a></div>
                 <ul>
                     {   
                         this.state.links.map( (link, index) => {
