@@ -26,10 +26,10 @@ const Modal = (props) => {
                             <img  key={index} src={image} className="modal_img" />
                         )
                     })}
-                    {selectedCard.video_link && 
+                    {selectedCard.video_link && modalOpen &&
                         <iframe width="100%" height="700" 
                         src={selectedCard.video_link}
-                        frameborder="0" 
+                        frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                     }

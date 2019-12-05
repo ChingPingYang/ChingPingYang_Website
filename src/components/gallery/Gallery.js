@@ -67,7 +67,7 @@ class Gallery extends Component {
     render() {
         return(
             <div id="gallery" className="gallery_container">
-                <Filter filters={this.state.filters} changeCurrentFilter={this.changeCurrentFilter} resetIsIn={this.resetIsIn} />
+                <Filter filters={this.state.filters} currentFilter={this.state.currentFilter} changeCurrentFilter={this.changeCurrentFilter} resetIsIn={this.resetIsIn} />
                 <Card works={this.state.works} currentFilter={this.state.currentFilter} handleClickedCard={this.handleClickedCard} isIn={this.state.isIn}/>
                 <Modal selectedCard={this.state.selectedCard} modalOpen={this.state.modalOpen} handleCloseModal={this.handleCloseModal} />
             </div>

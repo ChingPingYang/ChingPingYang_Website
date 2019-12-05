@@ -3,6 +3,7 @@ import github_logo from "./images/github_logo.svg";
 import linkedin_logo from "./images/linkedin_logo.svg";
 import cv_logo from "./images/cv_logo.svg";
 import arrow_icon from "./images/arrow.svg";
+import cv_pdf from "../header/images/CoverLetter_ChingPing-Yang.pdf";
 
 
 class Sidebar extends Component {
@@ -18,6 +19,17 @@ class Sidebar extends Component {
             isClicked: !this.state.isClicked
         })
     }
+
+    componentDidMount() {
+        setInterval(()=>{
+            if(window.pageYOffset > (window.innerHeight / 2)) {
+                this.setState({
+                    isClicked: false
+                })
+            }
+        }, 250)
+    }
+
 
     render() {
         return (
@@ -35,7 +47,7 @@ class Sidebar extends Component {
                 <div className="sidebar_logos_container">
                     <a className="sidebar_logos_logo" href="https://github.com/ChingPingYang" target="_blank" rel="noopener noreferrer"> <img src={github_logo} alt="ching-ping yang github" width="40px"/> </a>
                     <a className="sidebar_logos_logo" href="https://www.linkedin.com/in/chingpingyang/" target="_blank" rel="noopener noreferrer"> <img src={linkedin_logo} alt="ching-ping yang linkedin" width="40px"/> </a>
-                    <a className="sidebar_logos_logo" href="https://www.linkedin.com/in/chingpingyang/" target="_blank" rel="noopener noreferrer"> <img src={cv_logo} alt="ching-ping yang cv" width="40px"/> </a>
+                    <a className="sidebar_logos_logo" href={cv_pdf} target="_blank" rel="noopener noreferrer"> <img src={cv_logo} alt="ching-ping yang cv" width="40px"/> </a>
                 </div>
                 
             </div>
