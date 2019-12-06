@@ -20,7 +20,7 @@ class Header extends Component {
                         duration= "1700"
                     >   
                         <Tween
-                            to={{y: "90vh"}}
+                            to={{y: "90vh",  scale: "1.08"}}
                         >   
                             <div className="header_bg sky"></div>
                         </Tween>
@@ -30,7 +30,7 @@ class Header extends Component {
                         duration= "900"
                     >   
                         <Tween
-                            to={{y: "35vh", scale: "1.05"}}
+                            to={{y: "50vh", scale: "1.08"}}
                         >
                             <div className="header_bg sea"></div>
                         </Tween>

@@ -9,6 +9,7 @@ const Content = () => {
 
     return (
         <div className="content_container">
+            <div className="content_mask">
             <h2 id="subtitle" className="content_subtitle">Front-End Developer / UI & Visual Designer</h2>
             <h1 className="content_myName">CHING PING YANG</h1>   
             <div className="content_decoration"></div>
@@ -24,8 +25,8 @@ const Content = () => {
             </div>
             <h3 className="content_more">MORE</h3>
             <h4 className="content_more_skills">JAVA, Node.js, Sass, Adobe XD, Figma, Illustrator, 
-            Photoshope, After Effect, Premiere, C4D, MAYA</h4>
-
+            Photoshope, After Effect, Premiere, C4D, MAYA</h4>            
+            </div>
         </div>
     )
 }
