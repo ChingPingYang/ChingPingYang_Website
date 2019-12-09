@@ -15,7 +15,7 @@ export const data = {
         website_url: "https://eager-volhard-bd9102.netlify.com",
         subtitle: "JavaScript / CSS / HTML",
         title: "GONG CHA",
-        description: "Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.",
+        description: "Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.",
         roles: "Developer, UI Design, Animation"                
     },
     {

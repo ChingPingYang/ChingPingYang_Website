@@ -1,3 +1,4 @@
+@import "./mixin";
 $prim_white: #efefef;
 $prim_gray: #a2a2a2;
 $prim_yellow: #ffff00;
@@ -21,6 +22,15 @@ html, body {
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
+    @include break(md) {
+        font-size: 13px;
+    }
+    @include break(sm) {
+        font-size: 12px;
+    }
+    @include break(xs) {
+        font-size: 11px;
+    }
 }
 body {
     opacity: 0;
@@ -56,6 +66,11 @@ body {
         align-items: center;
         z-index: 1;
         transition-duration: 0.5s;
+        
+        @include break(xs) {
+            justify-content: center;
+            height: 40px;
+        }
         &.isOverHero {
             background-color: $prim_blue;
             box-shadow: 0px 10px 15px -5px rgba($color: #020166, $alpha: 0.5);
@@ -69,7 +84,10 @@ body {
             background: url(./components/header/images/logo.svg) no-repeat;
             background-position: center;
             position: relative;
-            
+            transform: translateX(-6px);
+            @include break(xs) {
+                display: none;
+            }
             .nav_logo_link {
                 position: absolute;
                 width: 100%;
@@ -80,10 +98,17 @@ body {
         ul {
             display: flex;
             list-style: none;
-
+            
+            @include break(xs) {
+                width: 300px;
+                justify-content: space-between;
+            }
             .link_li{
                 display: inline-block;
                 margin-left: 1.8rem;
+                @include break(xs) {
+                    margin: 0;
+                }
                 a {
                     font-size: $paragraph;
                     font-weight: 300;
@@ -102,6 +127,9 @@ body {
                 display: inline-block;
                 margin-left: 1.8rem;
                 background-color: $prim_white;
+                @include break(xs) {
+                    display: none;
+                }
             }
         }
     }
@@ -115,7 +143,6 @@ body {
         flex-flow: column;
         margin-left: 50px;
         opacity: 0;
-        transform-origin: center;
         border: $prim_white solid 1px;
         animation: heroRec 1.5s 1s ease-in-out;
         animation-fill-mode: forwards;
@@ -135,6 +162,51 @@ body {
                 width: 470px;
                 opacity: 100;
                 transform: translateY(-50%) translateX(0px);
+            }
+        }
+
+        @include break(sm) {
+            margin: 0px;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            @keyframes heroRec {
+                0% {
+                    height: 0px;
+                    width: 0px;
+                    opacity: 0;
+                }
+                50% {
+                    height: 0.5px;
+                    width: 330px;
+                    transform: translateY(-50%) translateX(-50%);
+                }
+                100% {
+                    height: 450px;
+                    width: 330px;
+                    opacity: 100;
+                    transform: translateY(-50%) translateX(-50%);
+                }
+            }
+        }
+        @include break(xxs) {
+            transform: translateY(-50%) translateX(-50%);
+            @keyframes heroRec {
+                0% {
+                    height: 0px;
+                    width: 0px;
+                    opacity: 0;
+                }
+                50% {
+                    height: 0.5px;
+                    width: 250px;
+                    transform: translateY(-50%) translateX(-50%);
+                }
+                100% {
+                    height: 450px;
+                    width: 250px;
+                    opacity: 100;
+                    transform: translateY(-50%) translateX(-50%);
+                }
             }
         }
         .content_mask {
@@ -164,6 +236,13 @@ body {
                 font-weight: 400;
                 font-size: $title;
                 line-height: 4.5rem;
+                @include break(sm) {
+                    font-size: 4rem;
+                }
+                @include break(xxs) {
+                    font-size: 3rem;
+                    line-height: 3rem;
+                }
             }
             .content_decoration {
                 width: 100%;
@@ -191,15 +270,27 @@ body {
                 }
                 .content_specialties_logos_react {
                     width: 45px;
+                    @include break(xs) {
+                        width: 35px;
+                    }
                 }
                 .content_specialties_logos_js {
                     width: 40px;
+                    @include break(xs) {
+                        width: 30px;
+                    }
                 }
                 .content_specialties_logos_html {
                     width: 35px;
+                    @include break(xs) {
+                        width: 25px;
+                    }
                 }
                 .content_specialties_logos_css {
                     width: 35px;
+                    @include break(xs) {
+                        width: 25px;
+                    }
                 }
             }
             .content_more {
@@ -249,6 +340,7 @@ body {
         transition-duration: 0.5s;
         animation: sideBarLoad 1s ease-in-out 1.8s;
         animation-fill-mode: forwards;
+        
         @keyframes sideBarLoad {
             75% {
                 transform: translateY(-50%) translateX(-10px);
@@ -260,7 +352,20 @@ body {
                 transform: translateY(-50%) translateX(0px);
             }
         }
-        
+        @include break(xs) {
+            width: 100px;
+            @keyframes sideBarLoad {
+                75% {
+                    transform: translateY(-50%) translateX(-60px);
+                }
+                85% {
+                    transform: translateY(-50%) translateX(-40px);
+                }
+                100% {
+                    transform: translateY(-50%) translateX(-50px);
+                }
+            }
+        }
         .sidebar_arrow_container {
             width: 32px;
             height: 115px;
@@ -321,19 +426,28 @@ body {
 
 .main_container {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     position: relative;
     background: linear-gradient(to right bottom, #1e1e5a 70%, #15338d);
+    @include break(md) {
+        flex-wrap: wrap;
+        // flex-direction: column;
+    }
 
     .sliderPicture_container {
         width: 100%;
-        min-height: 100vh;
+        min-height: 80vh;
         position: relative;
         overflow: hidden;
         opacity: 0;
         transition-duration: 1.5s;
         &.animateIn {
             opacity: 1;
+        }
+        @include break(md) {
+            min-width: 100vw;
+            min-height: 50vh;
         }
         .sliderPicture_rowOfPictures {
             width: 100%;
@@ -342,7 +456,6 @@ body {
             flex-direction: column;
             flex-wrap: wrap;
             transition: 0.9s ease;
-            // opacity: 0;
             .sliderPicture_picture {
                 width: 100%;
                 height: 100%;
@@ -372,6 +485,14 @@ body {
                 width: 8rem;
                 height: 100%;
                 background: linear-gradient(to left, rgb(30, 30, 93), rgba(30,30,93,0));
+                @include break(md) {
+                    top: unset;
+                    bottom: 0px;
+                    height: 8rem;
+                    width: 100%;
+                    background: linear-gradient(to top, rgb(30, 30, 93), rgba(30,30,93,0));
+                    
+                }
             }
         }
         
@@ -379,15 +500,28 @@ body {
 
     .sliderContent_container {
         width: 100%;
-        min-height: 100vh;
+        min-height: 80vh;
         padding: 50px;
         position: relative;
         opacity: 0;
         transition-duration: 1s;
+        
         &.animateIn {
             opacity: 1;
         }
+        @include break(md) {
+            padding: unset;
+            min-width: 100vw;
+            min-height: 50vh;
+        }
         .sliderContent_mapDiv_container {
+            @include break(md) {
+                position: relative;
+                padding: 30px 50px 120px 50px;
+                width: 100%;
+                height: 100%;
+            }
+
             .sliderContent_titleContainer {
                 transform: translateX(0px);
                 opacity: 0;
@@ -395,6 +529,13 @@ body {
                 &.animateIn {
                     opacity: 1;
                     transform: translateX(-100px);
+                }
+                @include break(md) {
+                    &.animateIn {
+                        transition-delay: 0.2s;
+                        opacity: 1;
+                        transform: translateX(0px);
+                    }
                 }
                 .sliderContent_subtitle {
                     font-size: $subtitle;
@@ -407,7 +548,10 @@ body {
                     font-size: $title;
                     font-family: $titleFont;
                     font-weight: 400;
-                    
+                    line-height: 4.3rem;
+                    @include break(md) {
+                        
+                    }
                 }
             }
             .sliderContent_decoration_yellow {
@@ -466,7 +610,15 @@ body {
                         background-color: $prim_yellow;
                         color: $prim_blue;
                     }
-                    
+                }
+                @include break(md) {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 40px;
+                    transform: translateX(-50%);
+                }
+                @include break(xs) {
+                    bottom: 70px;
                 }
             }
             .sliderContent_numberBG {
@@ -495,20 +647,26 @@ body {
         cursor: pointer;
         
         &.previous {
-            top: 85vh;
+            bottom: 40px;
             left: 50px; 
             &:hover {
                 background: url(./components/main/images/btn_hovered.svg) no-repeat;
                 transform: scale(1.2);
                 opacity: 0.7;
             }
+            @include break(xs) {
+                bottom: 20px;
+            }
         }
         &.next {
-            top: 85vh;
+            bottom: 40px;
             right: 50px;
             transform: rotate(180deg);
             &:hover {
                 transform: scale(1.2) rotate(180deg);
+            }
+            @include break(xs) {
+                bottom: 20px;
             }
         }
     }
@@ -588,6 +746,7 @@ body {
             }
         }
     }
+
 
     .modal_container {
         position: fixed;
@@ -691,3 +850,12 @@ body {
         align-items: center;
     }
 }
+
+
+// @media (max-width: 450px) {
+//     .footer_container {
+//         .footer_copyright {
+
+//         }
+//     }
+// }
