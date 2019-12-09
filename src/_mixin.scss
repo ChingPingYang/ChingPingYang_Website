@@ -1,11 +1,11 @@
 // $breakpoints: (
-//   xs: 320px,
-//   sm: 480px,
-//   ms: 540px,
-//   md: 760px,
-//   lg: 960px,
-//   xl: 1200px,
-//   xxl: 1440px,
+//   xxs: 375px,
+//   xs: 440px,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 1080px,
+//   xl: 1440px,
+//   xxl: 1920px,
 // );
 @mixin break($size, $isMax: false) {
     $breakpoints: (
@@ -22,8 +22,8 @@
       // Large screen / desktop
       lg: 1080px,
       // Extra large screen / wide desktop
-      xl: 1370px,
-      xxl: 1600px,
+      xl: 1440px,
+      xxl: 1920px,
     );
     @if (map-has-key($breakpoints, $size)) {
       @if ($isMax) {

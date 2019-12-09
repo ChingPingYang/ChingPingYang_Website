@@ -22,6 +22,9 @@ html, body {
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
+    @include break(xl, xxl) {
+        font-size: 19px;
+    }
     @include break(md) {
         font-size: 13px;
     }
@@ -164,6 +167,26 @@ body {
                 transform: translateY(-50%) translateX(0px);
             }
         }
+        @include break(xl, xxl) {
+            @keyframes heroRec {
+                0% {
+                    height: 0px;
+                    width: 0px;
+                    opacity: 0;
+                }
+                50% {
+                    height: 0.5px;
+                    width: 600px;
+                    transform: translateY(-50%) translateX(0px);
+                }
+                100% {
+                    height: 600px;
+                    width: 600px;
+                    opacity: 100;
+                    transform: translateY(-50%) translateX(0px);
+                }
+            }
+        }
 
         @include break(sm) {
             margin: 0px;
@@ -270,24 +293,36 @@ body {
                 }
                 .content_specialties_logos_react {
                     width: 45px;
+                    @include break(xl, xxl) {
+                        width: 55px;
+                    }
                     @include break(xs) {
                         width: 35px;
                     }
                 }
                 .content_specialties_logos_js {
                     width: 40px;
+                    @include break(xl, xxl) {
+                        width: 50px;
+                    }
                     @include break(xs) {
                         width: 30px;
                     }
                 }
                 .content_specialties_logos_html {
                     width: 35px;
+                    @include break(xl, xxl) {
+                        width: 45px;
+                    }
                     @include break(xs) {
                         width: 25px;
                     }
                 }
                 .content_specialties_logos_css {
                     width: 35px;
+                    @include break(xl, xxl) {
+                        width: 45px;
+                    }
                     @include break(xs) {
                         width: 25px;
                     }
@@ -688,7 +723,9 @@ body {
         display: flex;
         width: 75%;
         justify-content: space-between;
-        // border: solid 1px red;
+        @include break(md) {
+            width: 90%;
+        }
         .filter_btn {
             all: unset;
             text-align: center;
@@ -715,13 +752,11 @@ body {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        // border: solid 1px red;
         .card_singalCard_container{
             flex-basis: 250px;
             height: 250px;
             margin: 20px;
             flex-grow: 1;
-            // border: solid 3px rgb(0, 17, 255);
             overflow: hidden;
             transform: translateY(20px);
             opacity: 0;
@@ -737,7 +772,6 @@ body {
                 background-size: cover;
                 background-repeat: no-repeat;
                 cursor: pointer;
-                // border: solid 3px rgb(255, 72, 0);
                 transition-duration: 0.5s;
             }
             &:hover .card_singalCard_img{
@@ -830,32 +864,36 @@ body {
 
 .footer_container {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: $prim_blue;
-    .footer_copyright {
-        position: absolute;
-        left: 40px;
-        font-weight: 100;
-        font-size: 11px;
-        color: #8da5e2;
+    @include break(lg) {
+        flex-direction: column;
+        padding: 10px;
     }
     .footer_icons_container {
         display: flex;
         width: 150px;
         justify-content: space-between;
         align-items: center;
+        @include break(lg) {
+            margin-bottom: 5px;
+        }
+    }
+    .footer_copyright {
+        position: absolute;
+        left: 50px;
+        font-weight: 100;
+        font-size: 11px;
+        color: #8da5e2;
+        @include break(lg) {
+            left: unset;
+            position: relative;
+        }
     }
 }
 
 
-// @media (max-width: 450px) {
-//     .footer_container {
-//         .footer_copyright {
-
-//         }
-//     }
-// }
