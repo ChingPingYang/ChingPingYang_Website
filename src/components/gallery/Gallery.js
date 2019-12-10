@@ -1,8 +1,9 @@
-import React ,{ Component }from "react";
+import React ,{ Component, lazy, Suspense }from "react";
 import { data } from "./data";
 import Filter from "./filter/Filter";
-import Card from "./card/Card";
+// import Card from "./card/Card";
 import Modal from "./modal/Modal";
+const Card = lazy(() => import("./card/Card"));
 
 
 class Gallery extends Component {
@@ -68,7 +69,9 @@ class Gallery extends Component {
         return(
             <div id="gallery" className="gallery_container">
                 <Filter filters={this.state.filters} currentFilter={this.state.currentFilter} changeCurrentFilter={this.changeCurrentFilter} resetIsIn={this.resetIsIn} />
-                <Card works={this.state.works} currentFilter={this.state.currentFilter} handleClickedCard={this.handleClickedCard} isIn={this.state.isIn}/>
+                <Suspense fallback={<div className="gallery_fallback">Loading...</div>}>
+                    <Card works={this.state.works} currentFilter={this.state.currentFilter} handleClickedCard={this.handleClickedCard} isIn={this.state.isIn}/>
+                </Suspense>
                 <Modal selectedCard={this.state.selectedCard} modalOpen={this.state.modalOpen} handleCloseModal={this.handleCloseModal} />
             </div>
         )

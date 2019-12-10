@@ -467,7 +467,6 @@ body {
     background: linear-gradient(to right bottom, #1e1e5a 70%, #15338d);
     @include break(md) {
         flex-wrap: wrap;
-        // flex-direction: column;
     }
 
     .sliderPicture_container {
@@ -717,6 +716,11 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: $prim_white;
+    .gallery_fallback {
+        font-size: $paragraph;
+        color: $prim_gray;
+        font-style: italic;
+    }
 
     .filter_container {
         margin: 20px 0px 60px 0px;
