@@ -90,8 +90,8 @@ export const data = {
                 description: `The motivation and philosophy of this poster creation comes from the recent huge earthquake occurred in Japan, which had caused the explosion of a nuclear plant and subsequently led to a global crisis of ecosystem.
                               The departed, who had died from nuclear disasters, portrayed with a halo of nuclear signs in the poster, served as a sarcasm targeted at modern people who have built nuclear plants without bounds in the name of pursuing 
                               a better life, never considering the risks behind the nuclear energy.`,
-                poster_url: "https://i.imgur.com/sqfSBLQ.jpg",
-                imageArray: ["https://i.imgur.com/sqfSBLQ.jpg"]
+                poster_url: "https://i.imgur.com/hrXxtPp.jpg",
+                imageArray: ["https://i.imgur.com/hrXxtPp.jpg"]
             },
             {
                 id: 1,
