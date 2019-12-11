@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107 107"><title>new_portfolio</title><circle cx="53.5" cy="53.5" r="52.68" style="fill:none;stroke:#efefef;stroke-miterlimit:10"/><polyline points="64.51 82.9 35.11 53.5 64.51 24.1" style="fill:none;stroke:#efefef;stroke-linecap:round;stroke-linejoin:round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107 107">
+    <title>new_portfolio</title>
+    <circle cx="53.5" cy="53.5" r="52.68" style="stroke:#efefef;stroke-miterlimit:10"/>
+    <polyline points="64.51 82.9 35.11 53.5 64.51 24.1" style="fill:none;stroke:#efefef;stroke-linecap:round;stroke-linejoin:round" />
+</svg>

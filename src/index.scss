@@ -140,12 +140,13 @@ body {
     .content_container{
         position: absolute;
         top: 50%;
-        transform: translateY(-50%) translateX(235px);
         color: $prim_white;
         display: flex;
         flex-flow: column;
         margin-left: 50px;
         opacity: 0;
+        height: 500px;
+        width: 470px;
         border: $prim_white solid 1px;
         animation: heroRec 1.5s 1s ease-in-out;
         animation-fill-mode: forwards;
@@ -154,54 +155,61 @@ body {
                 height: 0px;
                 width: 0px;
                 opacity: 0;
+                transform: translate(235px, 0%);
             }
             50% {
                 height: 2px;
                 width: 470px;
-                transform: translateY(-50%) translateX(0px);
+                opacity: 1;
+                transform: translate(0px, 0%);
             }
             100% {
                 height: 500px;
                 width: 470px;
-                opacity: 100;
-                transform: translateY(-50%) translateX(0px);
+                opacity: 1;
+                transform: translateX(0px) translateY(-50%);
             }
         }
         @include break(xl, xxl) {
+            height: 600px;
+            width: 600px;
             @keyframes heroRec {
                 0% {
                     height: 0px;
                     width: 0px;
                     opacity: 0;
+                    transform: translate(235px, 0%);
                 }
                 50% {
                     height: 2px;
                     width: 600px;
-                    transform: translateY(-50%) translateX(0px);
+                    transform: translate(0px, 0%);
                 }
                 100% {
                     height: 600px;
                     width: 600px;
                     opacity: 100;
-                    transform: translateY(-50%) translateX(0px);
+                    transform: translateX(0px) translateY(-50%);
                 }
             }
         }
 
         @include break(sm) {
-            margin: 0px;
+            margin-left: unset;
             left: 50%;
-            transform: translateY(-50%) translateX(-50%);
+            height: 450px;
+            width: 330px;
             @keyframes heroRec {
                 0% {
                     height: 0px;
                     width: 0px;
                     opacity: 0;
+                    transform: translateY(0%) translateX(-50%);
                 }
                 50% {
                     height: 2px;
                     width: 330px;
-                    transform: translateY(-50%) translateX(-50%);
+                    transform: translateY(0%) translateX(-50%);
                 }
                 100% {
                     height: 450px;
@@ -212,17 +220,21 @@ body {
             }
         }
         @include break(xxs) {
-            transform: translateY(-50%) translateX(-50%);
+            margin-left: unset;
+            left: 50%;
+            height: 450px;
+            width: 250px;
             @keyframes heroRec {
                 0% {
                     height: 0px;
                     width: 0px;
                     opacity: 0;
+                    transform: translateY(0%) translateX(-50%);
                 }
                 50% {
                     height: 2px;
                     width: 250px;
-                    transform: translateY(-50%) translateX(-50%);
+                    transform: translateY(0%) translateX(-50%);
                 }
                 100% {
                     height: 450px;
@@ -239,7 +251,7 @@ body {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            animation: addPadding 1s 1.5s;
+            animation: addPadding 0.8s 1.7s;
             animation-fill-mode: forwards;
             @keyframes addPadding {
                 0% {
@@ -669,38 +681,28 @@ body {
             }
         }
     }
-
-    .main_btn {
+    svg {
         width: 4rem;
         height: 4rem;
-        background: url(./components/main/images/btn.svg) no-repeat;
-        background-size: cover;
-        background-position: center;
         position: absolute;
+        bottom: 40px;
+        left: 50px; 
+        fill: rgba($color: #1e1e5d, $alpha: 0);
         transition: 0.2s ease-in-out;
-        cursor: pointer;
-        
-        &.previous {
-            bottom: 40px;
-            left: 50px; 
-            &:hover {
-                background: url(./components/main/images/btn_hovered.svg) no-repeat;
-                transform: scale(1.2);
-                opacity: 0.7;
-            }
-            @include break(xs) {
-                bottom: 20px;
-            }
+        @include break(xs) {
+            bottom: 20px;
+        }
+        &:hover {
+            fill: rgba($color: #1e1e5d, $alpha: 1);
+            transform: scale(1.2);
+            opacity: 0.7;
         }
         &.next {
-            bottom: 40px;
+            left: unset;
             right: 50px;
             transform: rotate(180deg);
             &:hover {
                 transform: scale(1.2) rotate(180deg);
-            }
-            @include break(xs) {
-                bottom: 20px;
             }
         }
     }
@@ -735,18 +737,21 @@ body {
             text-align: center;
             width: 90px;
             cursor: pointer;
-            border: solid 1px $prim_gray;
+            -webkit-text-fill-color: $prim_gray;
             color: $prim_gray;
+            border: solid 1px $prim_gray;
             font-size: $paragraph;
             transition-duration: 0.5s;
             &.selected {
                 background-color: $prim_gray;
                 border: solid 1px $prim_gray;
+                -webkit-text-fill-color: $prim_white;
                 color: $prim_white;
             }
             &:hover {
                 background-color: $prim_gray;
                 border: solid 1px $prim_gray;
+                -webkit-text-fill-color: $prim_white;
                 color: $prim_white;
             }
         }

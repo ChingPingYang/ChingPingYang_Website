@@ -2,6 +2,7 @@ import React , { Component } from "react";
 import SliderContent from "./slider/SliderContent";
 import SliderPicture from "./slider/SliderPicture";
 import {data} from "./data";
+import { ReactComponent as PreviousIcon } from '../main/images/btn.svg';
 
 class Main extends Component {
     constructor(){
@@ -34,8 +35,10 @@ class Main extends Component {
             <main id="main" className="main_container">
                 <SliderPicture slidesArray={this.state.slides} currentSlide={this.state.currentSlide}/>                
                 <SliderContent slidesArray={this.state.slides} currentSlide={this.state.currentSlide}/>
-                <div className="main_btn previous" onClick={this.handlePrevious}></div>
-                <div className="main_btn next" onClick={this.handleNext}></div>
+                 
+                <PreviousIcon onClick={this.handlePrevious}/>
+                <PreviousIcon className="next" onClick={this.handleNext}/>
+                
             </main>
         )
     }
