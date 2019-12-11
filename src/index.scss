@@ -193,11 +193,33 @@ body {
                 }
             }
         }
-
+        @include break(md) {
+            height: 450px;
+            width: 420px;
+            @keyframes heroRec {
+                0% {
+                    height: 0px;
+                    width: 0px;
+                    opacity: 0;
+                    transform: translate(235px, 0%);
+                }
+                50% {
+                    height: 2px;
+                    width: 420px;
+                    transform: translate(0px, 0%);
+                }
+                100% {
+                    height: 450px;
+                    width: 420px;
+                    opacity: 100;
+                    transform: translateX(0px) translateY(-50%);
+                }
+            }
+        }
         @include break(sm) {
             margin-left: unset;
             left: 50%;
-            height: 450px;
+            height: 440px;
             width: 330px;
             @keyframes heroRec {
                 0% {
@@ -212,7 +234,7 @@ body {
                     transform: translateY(0%) translateX(-50%);
                 }
                 100% {
-                    height: 450px;
+                    height: 440px;
                     width: 330px;
                     opacity: 100;
                     transform: translateY(-50%) translateX(-50%);
@@ -299,41 +321,52 @@ body {
             .content_specialties_logos{
                 margin-top: 5px;
                 display: flex;
+                width: 100%;
+                justify-content: space-between;
                 align-items: center;
-                img {
-                    margin-right: 50px;
-                }
                 .content_specialties_logos_react {
-                    width: 45px;
+                    width: 50px;
                     @include break(xl, xxl) {
                         width: 55px;
+                    }
+                    @include break(sm) {
+                        width: 40px;
                     }
                     @include break(xs) {
                         width: 35px;
                     }
                 }
                 .content_specialties_logos_js {
-                    width: 40px;
+                    width: 45px;
                     @include break(xl, xxl) {
                         width: 50px;
+                    }
+                    @include break(sm) {
+                        width: 35px;
                     }
                     @include break(xs) {
                         width: 30px;
                     }
                 }
                 .content_specialties_logos_html {
-                    width: 35px;
+                    width: 40px;
                     @include break(xl, xxl) {
                         width: 45px;
+                    }
+                    @include break(sm) {
+                        width: 30px;
                     }
                     @include break(xs) {
                         width: 25px;
                     }
                 }
                 .content_specialties_logos_css {
-                    width: 35px;
+                    width: 40px;
                     @include break(xl, xxl) {
                         width: 45px;
+                    }
+                    @include break(sm) {
+                        width: 30px;
                     }
                     @include break(xs) {
                         width: 25px;
@@ -725,23 +758,27 @@ body {
     }
 
     .filter_container {
-        margin: 20px 0px 60px 0px;
+        margin: 20px 0px 40px 0px;
         display: flex;
-        width: 75%;
-        justify-content: space-between;
-        @include break(md) {
-            width: 90%;
-        }
+        width: 96%;
+        flex-wrap: wrap;
+        justify-content: center;
+    
         .filter_btn {
             all: unset;
             text-align: center;
-            width: 90px;
+            margin: 5px;
+            min-width: 90px;
             cursor: pointer;
             -webkit-text-fill-color: $prim_gray;
             color: $prim_gray;
             border: solid 1px $prim_gray;
             font-size: $paragraph;
             transition-duration: 0.5s;
+            @include break(sm) {
+                min-width: 70px;
+            }
+            
             &.selected {
                 background-color: $prim_gray;
                 border: solid 1px $prim_gray;
