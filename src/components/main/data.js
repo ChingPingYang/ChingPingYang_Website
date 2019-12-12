@@ -13,9 +13,12 @@ export const data = {
         url: project1_bg,
         number_url: project1_number,
         website_url: "https://eager-volhard-bd9102.netlify.com",
-        subtitle: "JavaScript / CSS / HTML",
+        subtitle: "HTML / CSS",
         title: "GONG CHA",
-        description: "Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.",
+        description: `GONG CHA is a school project which was done by a small group of people (three people including me) in 4 days. 
+                      The instruction was to make a mockup website for whichever existing brand with HTML and CSS, and no JavaScript is allowed. 
+                      In this project I played two roles, designer and developer. I had one day to design the entire website and the rest of 
+                      days to develop the Hero and Feature sections.`,
         roles: "Developer, UI Design, Animation"                
     },
     {
@@ -24,19 +27,25 @@ export const data = {
         number_url: project2_number,
         website_url: "https://nostalgic-joliot-05ad64.netlify.com",
         subtitle: "JavaScript / CSS / HTML",
-        title: "SECOND PROJECT",
-        description: "Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.",
-        roles: "Developer, UI Design, Animation"                
+        title: "HIDING FROM BALLS",
+        description: `This is a small game I made when I first started learning JavaScript. The game starts with a small green ball which 
+                      the player can move around in the game board. In the meantime there will be few other balls moving randomly in the game 
+                      area to try to kill the player. Random balls will increase as time goes, but the player also has chance to deny the auto-generated
+                      balls when it turns red.`,
+        roles: "Developer, Animation"                
     },
     {
         id: 2,
-        url: project3_bg,
+        url: project1_bg,
         number_url: project3_number,
-        website_url: "https://fervent-johnson-f6f934.netlify.com",
-        subtitle: "JavaScript / CSS / HTML",
-        title: "THIRD PROJECT",
-        description: "Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me James. Passionate at creating beautiful design content which can be interacted with users. Currently, studying front end development in Vancouver.",
-        roles: "Developer, UI Design, Animation"                
+        website_url: "https://eager-volhard-bd9102.netlify.com",
+        subtitle: "HTML / CSS",
+        title: "GONG CHA",
+        description: `GONG CHA is a school project which was done by a small group of people (three people including me) in 4 days. 
+                      The instruction was to make a mockup website for whichever existing brand with HTML and CSS, and no JavaScript is allowed. 
+                      In this project I played two roles, designer and developer. I had one day to design the entire website and the rest of 
+                      days to develop the Hero and Feature sections.`,
+        roles: "Developer, Animation"                
     }
     ]
 
