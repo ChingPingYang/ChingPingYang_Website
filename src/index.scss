@@ -628,8 +628,11 @@ body {
                     font-family: $titleFont;
                     font-weight: 400;
                     line-height: 4.3rem;
-                    @include break(md) {
-                        
+                    @include break(sm) {
+                        font-size: 4rem;
+                    }
+                    @include break(xxs) {
+                        font-size: 3.3rem;
                     }
                 }
             }
