@@ -36,15 +36,14 @@ export const data = {
     },
     {
         id: 2,
-        url: project1_bg,
+        url: project3_bg,
         number_url: project3_number,
-        website_url: "https://eager-volhard-bd9102.netlify.com",
-        subtitle: "HTML / CSS",
-        title: "GONG CHA",
-        description: `GONG CHA is a school project which was done by a small group of people (three people including me) in 4 days. 
-                      The instruction was to make a mockup website for whichever existing brand with HTML and CSS, and no JavaScript is allowed. 
-                      In this project I played two roles, designer and developer. I had one day to design the entire website and the rest of 
-                      days to develop the Hero and Feature sections.`,
+        website_url: "https://vigorous-visvesvaraya-70500e.netlify.com/",
+        subtitle: "React.js / HTML / CSS",
+        title: "BRICKHOUSE VENTURES",
+        description: `The website is a school project which is made for a real existing Vancouver based company called Brickhouse Ventures.
+                      In this project I developed About and Partners sections according to client's needs. I also implemented Gsap and Scrollmagic
+                      libraries to create fade-in animation.`,
         roles: "Developer, Animation"                
     }
     ]
