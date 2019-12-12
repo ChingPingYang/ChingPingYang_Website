@@ -676,6 +676,7 @@ body {
                 margin-top: 2.5rem;
                 letter-spacing: 1.5px;
                 border: solid 1px $prim_white;
+                z-index: 1;
                 a {
                     display: block;
                     width: 100%;
@@ -713,7 +714,6 @@ body {
                 background-size: contain;
                 background-position: right;        
                 position: absolute;
-                
             }
         }
     }
