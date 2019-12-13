@@ -28,7 +28,7 @@ export const data = {
         website_url: "https://nostalgic-joliot-05ad64.netlify.com",
         subtitle: "JavaScript / CSS / HTML",
         title: "HIDING FROM BALLS",
-        description: `This is a small game I made when I first started learning JavaScript. The game starts with a small green ball which 
+        description: `A small game I made for practicing logic in JavaScript. The game starts with a small green ball which 
                       the player can move around in the game board. In the meantime there will be few other balls moving randomly in the game 
                       area to try to kill the player. Random balls will increase as time goes, but the player also has chance to deny the auto-generated
                       balls when it turns red.`,
