@@ -25,7 +25,7 @@ const Content = () => {
             </div>
             <h3 className="content_more">MORE</h3>
             <h4 className="content_more_skills">JAVA, Node.js, Sass, Adobe XD, Figma, Illustrator, 
-            Photoshope, After Effect, Premiere, C4D, MAYA</h4>            
+            Photoshop, After Effect, Premiere, C4D, MAYA</h4>            
             </div>
         </div>
     )
