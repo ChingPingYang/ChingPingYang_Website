@@ -14,7 +14,7 @@ const Content = () => {
             <h1 className="content_myName">CHING PING YANG</h1>   
             <div className="content_decoration"></div>
             <p className="content_about">Hi! Welcome to my website. I’m Ching-Ping Yang, you 
-            can also call me James. Passionate at creating beautiful design content and implementing 
+            can also call me James. Passionate about creating beautiful design content and implementing 
             into real-life websites. Currently, studying front-end development in Vancouver.</p>
             <h3 className="content_specialties">SPECIALTIES</h3>
             <div className="content_specialties_logos">

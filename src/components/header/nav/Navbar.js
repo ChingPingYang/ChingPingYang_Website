@@ -12,7 +12,7 @@ class Navbar extends Component {
                     url: '#',
                 },
                 {
-                    name: 'PORTFOLIO',
+                    name: 'FEATURED',
                     id: 2,
                     url: '#main'
                 },
