@@ -219,7 +219,7 @@ body {
         @include break(sm) {
             margin-left: unset;
             left: 50%;
-            height: 440px;
+            height: 455px;
             width: 330px;
             @keyframes heroRec {
                 0% {
@@ -234,7 +234,7 @@ body {
                     transform: translateY(0%) translateX(-50%);
                 }
                 100% {
-                    height: 440px;
+                    height: 455px;
                     width: 330px;
                     opacity: 100;
                     transform: translateY(-50%) translateX(-50%);
