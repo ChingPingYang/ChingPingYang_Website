@@ -15,7 +15,6 @@ const SliderPicture = (props) => {
                     <div className="sliderPicture_rowOfPictures" style={{transform: `translateX(-${currentSlide * 100}%)`}}>
                         {
                             slidesArray.map((slide, index) => {
-                                console.log(slide.url)
                                 return (
                                     <div key={index} 
                                         className={ `${slide.id === currentSlide ? "sliderPicture_picture currentSlide" : "sliderPicture_picture"}` } 
