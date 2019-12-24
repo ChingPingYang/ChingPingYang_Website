@@ -3,7 +3,7 @@ import github_logo from "./images/github_logo.svg";
 import linkedin_logo from "./images/linkedin_logo.svg";
 import cv_logo from "./images/cv_logo.svg";
 import arrow_icon from "./images/arrow.svg";
-import cv_pdf from "../header/images/CoverLetter_ChingPing-Yang.pdf";
+import cv_pdf from "../header/images/Resume_ChingPing-Yang.pdf";
 
 
 class Sidebar extends Component {
