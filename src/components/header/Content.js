@@ -1,8 +1,8 @@
 import React from "react";
 import react_logo from "./images/react_logo.svg";
 import js_logo from "./images/js_logo.svg";
-import html_logo from "./images/html_logo.svg";
-import css_logo from "./images/css_logo.svg";
+import nodeJS_logo from "./images/nodeJS_logo.svg";
+import Sass_logo from "./images/Sass_logo.svg";
 
 
 const Content = () => {
@@ -20,12 +20,12 @@ const Content = () => {
             <div className="content_specialties_logos">
                 <img className="content_specialties_logos_react" src={react_logo} alt="React"/>
                 <img className="content_specialties_logos_js" src={js_logo} alt="JavaScript"/>
-                <img className="content_specialties_logos_html" src={html_logo} alt="HTML"/>
-                <img className="content_specialties_logos_css" src={css_logo} alt="CSS"/>
+                <img className="content_specialties_logos_html" src={nodeJS_logo} alt="HTML"/>
+                <img className="content_specialties_logos_css" src={Sass_logo} alt="CSS"/>
             </div>
             <h3 className="content_more">MORE</h3>
-            <h4 className="content_more_skills">JAVA, Node.js, Sass, Adobe XD, Figma, Illustrator, 
-            Photoshop, After Effect, Premiere, C4D, MAYA</h4>            
+            <h4 className="content_more_skills">Express, RESTful API, GraphQL, MongoDB, MySQL, JAVA, Adobe XD, Figma, Illustrator, 
+            Photoshop, After Effect, Premiere, C4D</h4>            
             </div>
         </div>
     )
