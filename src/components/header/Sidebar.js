@@ -10,7 +10,7 @@ class Sidebar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isClicked: false
+            isClicked: window.innerWidth <= 570? false: true
         }
     }
 
@@ -29,7 +29,7 @@ class Sidebar extends Component {
             }
         }, 250)
     }
-
+    
 
     render() {
         return (

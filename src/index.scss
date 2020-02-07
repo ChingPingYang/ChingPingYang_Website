@@ -411,7 +411,7 @@ body {
     .sidebar_container{
         position: absolute;
         top: 50%;
-        transform: translateY(-50%) translateX(50px);
+        transform: translateY(-50%) translateX(110px);
         width: 150px;
         height: 215px;
         position: absolute;
@@ -421,7 +421,9 @@ body {
         transition-duration: 0.5s;
         animation: sideBarLoad 1s ease-in-out 1.8s;
         animation-fill-mode: forwards;
-        
+        @include break(md) {
+            transform: translateY(-50%) translateX(110px);
+        }
         @keyframes sideBarLoad {
             75% {
                 transform: translateY(-50%) translateX(-10px);
