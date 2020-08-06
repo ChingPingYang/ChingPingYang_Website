@@ -24,8 +24,8 @@ const Content = () => {
                 <img className="content_specialties_logos_css" src={Sass_logo} alt="CSS"/>
             </div>
             <h3 className="content_more">MORE</h3>
-            <h4 className="content_more_skills">Express, RESTful API, GraphQL, MongoDB, MySQL, JAVA, Adobe XD, Figma, Illustrator, 
-            Photoshop, After Effect, Premiere, C4D</h4>            
+            <h4 className="content_more_skills">jQuery, PHP, WordPress, Express, RESTful API, GraphQL, MongoDB, MySQL, JAVA, Adobe XD, Figma, Illustrator, 
+            Photoshop, After Effect</h4>            
             </div>
         </div>
     )
