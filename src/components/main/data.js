@@ -30,9 +30,9 @@ export const data = {
         website_url: "https://www.chingpingyang.club/",
         subtitle: "NERN Stack / DigitalOcean / Styled-Components",
         title: "FULL STACK eCOMMERCE",
-        description: `After some self study and practice I decided to make a web application with MERN stack and implement payment gateway (Braintree Sandbox) to it.
-                      Also deploy it to cloud server on DigitalOcean.
-                      In this project, users can search any book they like through the filter system. Users can also register and log-in to pay the order. 
+        description: `After some self-study and practice, I decided to make a web application with MERN stack and implement payment gateway (Braintree Sandbox) to it.
+                      And for the deployment, I chose DigitalOcean as my cloud service.
+                      In this project, users can search for any book they like through the filter system. Users can also register and log-in to pay the order. 
                       For admin, we can create new categories and products to the database (please email me for the admin account).`,
         roles: "Full Stack Development, UI Design"                
     },
