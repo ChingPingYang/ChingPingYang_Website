@@ -1,4 +1,4 @@
-import project1_bg from "./images/project1_bg.jpg";
+import project1_bg from "./images/project1_bg.png";
 import project2_bg from "./images/project2_bg.jpg";
 import project3_bg from "./images/project3_bg.jpg";
 import project4_bg from "./images/project4_bg.jpg";
@@ -11,17 +11,30 @@ import project5_number from "./images/project5_number.svg"
 
 export const data = {
     slides: [
+    // {
+    //     id: 0,
+    //     url: project1_bg,
+    //     number_url: project1_number,
+    //     website_url: "https://vigorous-visvesvaraya-70500e.netlify.com/",
+    //     subtitle: "React.js / HTML / CSS",
+    //     title: "BRICKHOUSE VENTURES",
+    //     description: `This website is built for a Vancouver based company called Brickhouse Ventures.
+    //                   In this project, I developed the About and Partners sections according to the client's needs. I also implemented GSAP and Scrollmagic
+    //                   libraries to create fade-in animation.`,
+    //     roles: "Developer, Animation"                
+    // },
     {
         id: 0,
         url: project1_bg,
         number_url: project1_number,
-        website_url: "https://vigorous-visvesvaraya-70500e.netlify.com/",
-        subtitle: "React.js / HTML / CSS",
-        title: "BRICKHOUSE VENTURES",
-        description: `This website is built for a Vancouver based company called Brickhouse Ventures.
-                      In this project, I developed the About and Partners sections according to the client's needs. I also implemented GSAP and Scrollmagic
-                      libraries to create fade-in animation.`,
-        roles: "Developer, Animation"                
+        website_url: "https://www.chingpingyang.club/",
+        subtitle: "NERN Stack / DigitalOcean / Styled-Components",
+        title: "FULL STACK eCOMMERCE",
+        description: `After some self study and practice I decided to make a web application with MERN stack and implement payment gateway (Braintree Sandbox) to it.
+                      Also deploy it to cloud server on DigitalOcean.
+                      In this project, users can search any book they like through the filter system. Users can also register and log-in to pay the order. 
+                      For admin, we can create new categories and products to the database (please email me for the admin account).`,
+        roles: "Full Stack Development, UI Design"                
     },
     {
         id: 1,
