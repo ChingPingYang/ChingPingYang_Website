@@ -956,8 +956,8 @@ body {
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
-      -webkit-box-shadow: 0 0 0 30px $prim_white inset !important;
       -webkit-text-fill-color: $prim_blue !important;
+      -webkit-box-shadow: 0 0 0 30px $prim_white inset !important;
     }
     .send_btn {
       -moz-appearance: none;
