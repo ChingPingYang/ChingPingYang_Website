@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [message, setMessage] = useState("");
   function sendEmail(e) {
     e.preventDefault();
-
+    if (!message.length) return window.alert("Please include your message.");
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -14,10 +15,10 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
         }
       );
     e.target.reset();
@@ -32,7 +33,12 @@ const Contact = () => {
         <label>Email</label>
         <input type="email" name="user_email" placeholder="Email" />
         <label>Message</label>
-        <textarea name="message" placeholder="Message" />
+        <textarea
+          name="message"
+          placeholder="Message"
+          onChange={(e) => setMessage(e.target.value)}
+          value={message}
+        />
         <button type="submit" className="send_btn">
           SEND
         </button>

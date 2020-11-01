@@ -71,7 +71,8 @@ body {
 
     @include break(xs) {
       justify-content: center;
-      height: 40px;
+      padding: 0px 0px;
+      height: 50px;
     }
     &.isOverHero {
       background-color: $prim_blue;
@@ -100,10 +101,9 @@ body {
     ul {
       display: flex;
       list-style: none;
-
       @include break(xs) {
-        width: 300px;
-        justify-content: space-between;
+        width: 100%;
+        justify-content: space-around;
       }
       .link_li {
         display: inline-block;
@@ -117,6 +117,9 @@ body {
           color: $prim_white;
           text-decoration: none;
           transition-duration: 0.4s;
+          @include break(xs) {
+            font-size: 1.1rem;
+          }
         }
         .link_li_a_hovered {
           color: $prim_yellow;
@@ -627,9 +630,10 @@ body {
           font-style: italic;
           font-weight: 300;
           color: #8da5e2;
-          margin-bottom: 5px;
+          margin-bottom: 12px;
         }
         .sliderContent_title {
+          color: $prim_yellow;
           font-size: $title;
           font-family: $titleFont;
           font-weight: 400;
@@ -751,169 +755,215 @@ body {
 }
 
 //-------------------------------------------- Gallery --------------------------------------------//
-
-.gallery_container {
-  width: 100%;
-  min-height: 100vh;
-  padding: 50px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $prim_white;
-  .gallery_fallback {
-    font-size: $paragraph;
-    color: $prim_gray;
-    font-style: italic;
-  }
-
-  .filter_container {
-    margin: 20px 0px 40px 0px;
+.gallery_wrapper {
+  position: relative;
+  .expand_gallery {
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    top: 0;
+    left: 0;
     display: flex;
-    width: 96%;
-    flex-wrap: wrap;
     justify-content: center;
-
-    .filter_btn {
-      all: unset;
-      text-align: center;
-      margin: 5px;
-      min-width: 90px;
-      cursor: pointer;
-      -webkit-text-fill-color: $prim_gray;
-      color: $prim_gray;
-      border: solid 1px $prim_gray;
-      font-size: $paragraph;
-      transition-duration: 0.5s;
-      @include break(sm) {
-        min-width: 70px;
-      }
-
-      &.selected {
-        background-color: $prim_gray;
-        border: solid 1px $prim_gray;
-        -webkit-text-fill-color: $prim_white;
-        color: $prim_white;
-      }
-      &:hover {
-        background-color: $prim_gray;
-        border: solid 1px $prim_gray;
-        -webkit-text-fill-color: $prim_white;
-        color: $prim_white;
-      }
-    }
-  }
-
-  .card_cards_container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    .card_singalCard_container {
-      flex-basis: 250px;
-      height: 250px;
-      margin: 20px;
-      flex-grow: 1;
-      overflow: hidden;
-      transform: translateY(20px);
-      opacity: 0;
-      &.animateIn {
-        transition-duration: 1s;
-        transform: translateY(0px);
-        opacity: 1;
-      }
-      .card_singalCard_img {
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        cursor: pointer;
-        transition-duration: 0.5s;
-      }
-      &:hover .card_singalCard_img {
-        transition-duration: 0.5s;
-        transform: scale(1.1);
-      }
-    }
-  }
-
-  .modal_container {
-    position: fixed;
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    padding: 50px 0px;
-    overflow: scroll;
-    background-color: rgba(0, 0, 0, 0.4);
-
-    .modal_content {
-      width: 80%;
-      min-height: 100vh;
-      margin: auto;
+    align-items: center;
+    background-color: rgba($prim_white, $alpha: 0.7);
+    .expandBtn {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      padding: 10px 20px 0px 20px;
-      background-color: $prim_white;
-      box-shadow: 0px 0px 30px -13px rgba($color: #0f1dec, $alpha: 0.7);
-      .modal_cross_container {
+      font-family: $titleFont;
+      color: $prim_blue;
+      font-size: $subtitle;
+      font-style: italic;
+      cursor: pointer;
+      &:after {
+        content: "";
         position: absolute;
-        width: 1.8rem;
-        height: 1.8rem;
-        top: 20px;
-        right: 20px;
-        color: $prim_gray;
+        bottom: 0;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        background-color: $prim_blue;
+        transform-origin: center;
+
+        transition: 0.5s;
+      }
+      &:hover:after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  .gallery_container {
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+
+    position: relative;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $prim_white;
+    filter: blur(3px);
+    transition: 1s;
+    .gallery_fallback {
+      font-size: $paragraph;
+      color: $prim_gray;
+      font-style: italic;
+    }
+
+    .filter_container {
+      margin: 20px 0px 40px 0px;
+      display: flex;
+      width: 96%;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .filter_btn {
+        all: unset;
+        text-align: center;
+        margin: 5px;
+        min-width: 90px;
         cursor: pointer;
-        .modal_crossBody {
-          width: 120%;
-          height: 0.2rem;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translateX(-50%) translateY(-50%);
+        -webkit-text-fill-color: $prim_gray;
+        color: $prim_gray;
+        border: solid 1px $prim_gray;
+        font-size: $paragraph;
+        transition-duration: 0.5s;
+        @include break(sm) {
+          min-width: 70px;
+        }
+
+        &.selected {
           background-color: $prim_gray;
-          border-radius: 50px;
-          transition-duration: 0.3s;
-          transition-timing-function: ease-in-out;
-          &.top {
-            transition-delay: 0.05s;
+          border: solid 1px $prim_gray;
+          -webkit-text-fill-color: $prim_white;
+          color: $prim_white;
+        }
+        &:hover {
+          background-color: $prim_gray;
+          border: solid 1px $prim_gray;
+          -webkit-text-fill-color: $prim_white;
+          color: $prim_white;
+        }
+      }
+    }
+
+    .card_cards_container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .card_singalCard_container {
+        flex-basis: 250px;
+        height: 250px;
+        margin: 20px;
+        flex-grow: 1;
+        overflow: hidden;
+        transform: translateY(20px);
+        opacity: 0;
+        &.animateIn {
+          transition-duration: 1s;
+          transform: translateY(0px);
+          opacity: 1;
+        }
+        .card_singalCard_img {
+          width: 100%;
+          height: 100%;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          transition-duration: 0.5s;
+        }
+        &:hover .card_singalCard_img {
+          transition-duration: 0.5s;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .modal_container {
+      position: fixed;
+      z-index: 1;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      padding: 50px 0px;
+      overflow: scroll;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      .modal_content {
+        width: 80%;
+        min-height: 100vh;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px 0px 20px;
+        background-color: $prim_white;
+        box-shadow: 0px 0px 30px -13px rgba($color: #0f1dec, $alpha: 0.7);
+        .modal_cross_container {
+          position: absolute;
+          width: 1.8rem;
+          height: 1.8rem;
+          top: 20px;
+          right: 20px;
+          color: $prim_gray;
+          cursor: pointer;
+          .modal_crossBody {
+            width: 120%;
+            height: 0.2rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: $prim_gray;
+            border-radius: 50px;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in-out;
+            &.top {
+              transition-delay: 0.05s;
+              transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            }
+            &.bottom {
+              transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+            }
+          }
+          &:hover .top {
+            background-color: $prim_blue;
+            transform: translateX(-50%) translateY(-50%) rotate(135deg);
+          }
+          &:hover .bottom {
+            background-color: $prim_blue;
             transform: translateX(-50%) translateY(-50%) rotate(45deg);
           }
-          &.bottom {
-            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        }
+
+        .modal_description_container {
+          margin: 30px 0px 10px 0px;
+          width: 90%;
+          line-height: 1.8rem;
+          h3 {
+            color: $prim_blue;
+            font-weight: 400;
+            font-size: $paragraph;
           }
         }
-        &:hover .top {
-          background-color: $prim_blue;
-          transform: translateX(-50%) translateY(-50%) rotate(135deg);
-        }
-        &:hover .bottom {
-          background-color: $prim_blue;
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        }
-      }
 
-      .modal_description_container {
-        margin: 30px 0px 10px 0px;
-        width: 90%;
-        line-height: 1.8rem;
-        h3 {
-          color: $prim_blue;
-          font-weight: 400;
-          font-size: $paragraph;
+        .modal_img {
+          width: 100%;
+          height: 100%;
+          margin: 20px 0px;
         }
-      }
-
-      .modal_img {
-        width: 100%;
-        height: 100%;
-        margin: 20px 0px;
       }
     }
   }
+  .expand {
+    height: 100%;
+    min-height: 100vh;
+    filter: none;
+  }
 }
-
 //-------------------------------------------- Contact --------------------------------------------//
 
 #contact_container {
@@ -958,6 +1008,7 @@ body {
     input:-webkit-autofill:active {
       -webkit-text-fill-color: $prim_blue !important;
       -webkit-box-shadow: 0 0 0 30px $prim_white inset !important;
+      box-shadow: 0 0 0 30px $prim_white inset !important;
     }
     .send_btn {
       -moz-appearance: none;
