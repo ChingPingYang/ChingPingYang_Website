@@ -43,8 +43,8 @@ const Content = () => {
         </div>
         <h3 className="content_more">MORE</h3>
         <h4 className="content_more_skills">
-          Next.js, Gatsby.js, Material-UI, TypeScript, Express, RESTful API,
-          GraphQL, MongoDB, jQuery, MySQL, JAVA, Adobe XD, Figma
+          Next.js, Gatsby.js, Material-UI, TypeScript, RESTful API, GraphQL,
+          MongoDB,Express, PostgreSQL, JAVA, Adobe XD, Figma
         </h4>
       </div>
     </div>
