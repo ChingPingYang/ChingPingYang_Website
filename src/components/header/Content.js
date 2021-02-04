@@ -9,7 +9,7 @@ const Content = () => {
     <div className="content_container">
       <div className="content_mask">
         <h2 id="subtitle" className="content_subtitle">
-          Full-Stack Developer / UI & Visual Designer
+          Front-End / Full-Stack Developer
         </h2>
         <h1 className="content_myName">CHING PING YANG</h1>
         <div className="content_decoration"></div>
@@ -44,7 +44,7 @@ const Content = () => {
         <h3 className="content_more">MORE</h3>
         <h4 className="content_more_skills">
           Next.js, Gatsby.js, Material-UI, TypeScript, RESTful API, GraphQL,
-          MongoDB,Express, PostgreSQL, JAVA, Adobe XD, Figma
+          MongoDB, Express, PostgreSQL, JAVA, Adobe XD, Figma
         </h4>
       </div>
     </div>

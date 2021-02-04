@@ -30,22 +30,22 @@ export const data = {
       website_url: "https://www.chingpingyang.club/",
       subtitle: "NERN Stack / DigitalOcean / Styled-Components",
       title: "Full Stack eCOMMERCE",
-      description: `After some self-study and practice, I decided to make a web application with MERN stack and implement payment gateway (Braintree Sandbox) to it.
+      description: `This is an e-commerce web application built with MERN stack. Also, Braintree is implemented as its payment gateway.
                       And for the deployment, I chose DigitalOcean as my cloud service.
                       In this project, users can search for any book they like through the filter system. Users can also register and log-in to pay the order. 
-                      For admin, we can create new categories and products to the database (please email me for the admin account).`,
+                      For admin, we can add new categories and products to the database (please email me for the admin account).`,
       roles: "Full Stack Development, UI Design",
     },
     {
       id: 1,
       url: project2_bg,
       number_url: project2_number,
-      website_url: "https://intense-temple-41335.herokuapp.com/",
-      subtitle: "React.js / Node.js / Express.js / MongoDB Atlas",
-      title: "Developer Connector",
-      description: `This project is based on an online course taught by Brad Traversy. I learned to develop a React app from front-end to back-end and
-                      understand the use of Redux. Although it's not my own project, I've learned a lot from it and tried to implement my own action in it.`,
-      roles: "Developer, UI Design, Animation",
+      website_url: "https://eager-rosalind-fed490.netlify.app/",
+      subtitle: "React.js / PokéAPI / Styled-Components",
+      title: "Pokémon Finder",
+      description: `Pokémon Finder is built with React.js for its front-end and can request data from PokéAPI.
+                    Users can find their favorite Pokémon by typing the name in the search bar. Auto-complete is also implemented to optimize the search results.`,
+      roles: "Front-End Development, UI Design, Animation",
     },
     {
       id: 2,
