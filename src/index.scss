@@ -113,7 +113,7 @@ body {
         }
         a {
           font-size: $paragraph;
-          font-weight: 300;
+          font-weight: bold;
           color: $prim_white;
           text-decoration: none;
           transition-duration: 0.4s;
@@ -132,7 +132,7 @@ body {
         display: inline-block;
         margin-left: 1.8rem;
         background-color: $prim_white;
-        @include break(xs) {
+        @include break(sm) {
           display: none;
         }
       }
@@ -389,9 +389,6 @@ body {
     }
   }
 
-  .sky {
-    background: url(./components/header/images/parallax_sky.png) no-repeat;
-  }
   .sea {
     background: url(./components/header/images/parallax_sea.png) no-repeat;
   }

@@ -17,20 +17,10 @@ class Header extends Component {
                 <Controller>
                     <Scene
                         triggerHook= "0"
-                        duration= "1700"
-                    >   
-                        <Tween
-                            to={{y: "90vh",  scale: "1.08"}}
-                        >   
-                            <div className="header_bg sky"></div>
-                        </Tween>
-                    </Scene>
-                    <Scene
-                        triggerHook= "0"
                         duration= "900"
                     >   
                         <Tween
-                            to={{y: "50vh", scale: "1.08"}}
+                            to={{y: "50vh", scale: "1"}}
                         >
                             <div className="header_bg sea"></div>
                         </Tween>
