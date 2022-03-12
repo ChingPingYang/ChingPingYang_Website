@@ -391,6 +391,7 @@ body {
 
   .sea {
     background: url(./components/header/images/parallax_sea.png) no-repeat;
+    background-attachment: fixed;
   }
   .me {
     background: url(./components/header/images/parallax_me.png) no-repeat;
