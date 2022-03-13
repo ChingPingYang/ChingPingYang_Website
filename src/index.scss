@@ -219,7 +219,7 @@ body {
       }
     }
     @include break(sm) {
-      margin-left: unset;
+      margin-left: inherit;
       left: 50%;
       height: 455px;
       width: 330px;
@@ -244,8 +244,6 @@ body {
       }
     }
     @include break(xxs) {
-      margin-left: unset;
-      left: 50%;
       height: 425px;
       width: 250px;
       @keyframes heroRec {
@@ -473,10 +471,10 @@ body {
         transition-duration: 0.5s;
       }
       .svg_fill_in {
-        fill: rgba($color: $prim_blue, $alpha: 0);
+        fill: rgba(24, 24, 188, 0);
       }
       .svg_fill_out {
-        fill: rgba($color: $prim_blue, $alpha: 0.7);
+        fill: rgba(24, 24, 188, 0.8);
       }
     }
   }
