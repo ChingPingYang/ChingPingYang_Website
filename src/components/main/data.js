@@ -63,7 +63,7 @@ export const data = {
       id: 3,
       url: project4_bg,
       number_url: project4_number,
-      website_url: "https://eager-volhard-bd9102.netlify.com",
+      website_url: "https://eager-volhard-bd9102.netlify.app",
       subtitle: "HTML / CSS",
       title: "Gong Cha",
       description: `GONG CHA is a school project which was done by a small group of people (three people including me) in 4 days. 
@@ -76,7 +76,7 @@ export const data = {
       id: 4,
       url: project5_bg,
       number_url: project5_number,
-      website_url: "https://nostalgic-joliot-05ad64.netlify.com",
+      website_url: "https://nostalgic-joliot-05ad64.netlify.app",
       subtitle: "JavaScript / CSS / HTML",
       title: "Hiding From Balls",
       description: `A small game I made for practicing logic in JavaScript. The game starts with a small green ball in which the player can move 
