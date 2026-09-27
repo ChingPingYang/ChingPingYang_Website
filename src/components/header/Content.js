@@ -11,14 +11,12 @@ const Content = () => {
         <h2 id="subtitle" className="content_subtitle">
           Front-End / Full-Stack Developer
         </h2>
-        <h1 className="content_myName">CHING PING YANG</h1>
+        <h1 className="content_myName">CHINGPING YANG</h1>
         <div className="content_decoration"></div>
         <p className="content_about">
-          Hi! Welcome to my website. I’m Ching-Ping Yang, you can also call me
-          James. Passionate about creating beautiful design content and
-          implementing into real-life websites. Currently working in Vancouver.
+          Full-stack developer with 5+ years of experience, primarily focused on front-end development. I work with React, Backbone.js, and PHP (Symfony), building and maintaining production systems backed by MySQL.
         </p>
-        <h3 className="content_specialties">SPECIALTIES</h3>
+        {/* <h3 className="content_specialties">SPECIALTIES</h3>
         <div className="content_specialties_logos">
           <img
             className="content_specialties_logos_react"
@@ -40,11 +38,10 @@ const Content = () => {
             src={Sass_logo}
             alt="CSS"
           />
-        </div>
-        <h3 className="content_more">MORE</h3>
+        </div> */}
+        <h3 className="content_more">Tech stack:</h3>
         <h4 className="content_more_skills">
-          Next.js, Gatsby.js, Material-UI, TypeScript, RESTful API, GraphQL,
-          MongoDB, Express, PostgreSQL, JAVA, Adobe XD, Figma
+          JavaScript, Backbone.js, React, PHP (Symfony), MySQL, AWS
         </h4>
       </div>
     </div>

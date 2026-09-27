@@ -142,38 +142,43 @@ body {
   .content_container {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     color: $prim_white;
     display: flex;
     flex-flow: column;
     margin-left: 50px;
-    opacity: 0;
-    height: 500px;
+
+    // opacity: 1;
+    // height: ;
+    height: fit-content;
     width: 470px;
     border: $prim_white solid 1px;
-    animation: heroRec 1.5s 1s ease-in-out;
-    animation-fill-mode: forwards;
-    @keyframes heroRec {
-      0% {
-        height: 0px;
-        width: 0px;
-        opacity: 0;
-        transform: translate(235px, 0%);
-      }
-      50% {
-        height: 2px;
-        width: 470px;
-        opacity: 1;
-        transform: translate(0px, 0%);
-      }
-      100% {
-        height: 500px;
-        width: 470px;
-        opacity: 1;
-        transform: translateX(0px) translateY(-50%);
-      }
-    }
+    // animation: heroRec 1.5s 1s ease-in-out;
+    // animation-fill-mode: forwards;
+    // @keyframes heroRec {
+    //   0% {
+    //     height: 0px;
+    //     width: 0px;
+    //     opacity: 0;
+    //     transform: translate(235px, 0%);
+    //     // transform: translate(235px, 0%);
+    //   }
+    //   50% {
+    //     height: 2px;
+    //     width: 470px;
+    //     opacity: 1;
+    //     transform: translate(0px, 0%);
+    //   }
+    //   100% {
+    //     height: fit-content;
+    //     // height: 500px;
+    //     width: 470px;
+    //     opacity: 1;
+    //     transform: translateX(0px) translateY(-50%);
+    //   }
+    // }
     @include break(xl, xxl) {
-      height: 600px;
+      // height: 600px;
       width: 600px;
       @keyframes heroRec {
         0% {
@@ -196,8 +201,11 @@ body {
       }
     }
     @include break(md) {
-      height: 450px;
+      // height: 450px;
       width: 420px;
+      margin-left: inherit;
+      left: 50%;
+      transform: translate(-50%, -50%);
       @keyframes heroRec {
         0% {
           height: 0px;
@@ -219,10 +227,11 @@ body {
       }
     }
     @include break(sm) {
-      margin-left: inherit;
-      left: 50%;
-      height: 455px;
-      width: 330px;
+      // margin-left: inherit;
+      // left: 50%;
+      // height: 455px;
+      // width: 330px;
+      width: 80%;
       @keyframes heroRec {
         0% {
           height: 0px;
@@ -244,8 +253,8 @@ body {
       }
     }
     @include break(xxs) {
-      height: 425px;
-      width: 250px;
+      // height: 425px;
+      // width: 250px;
       @keyframes heroRec {
         0% {
           height: 0px;
@@ -267,15 +276,16 @@ body {
       }
     }
     .content_mask {
-      position: absolute;
-      top: 0px;
-      left: 0px;
+      // position: absolute;
+      // top: 0px;
+      // left: 0px;
+      padding: 1.5rem;
       width: 100%;
       height: 100%;
       overflow: hidden;
       background-color: #1818bcad;
-      animation: addPadding 0.8s 1.7s;
-      animation-fill-mode: forwards;
+      // animation: addPadding 0.8s 1.7s;
+      // animation-fill-mode: forwards;
       @keyframes addPadding {
         0% {
           padding: 0px;
@@ -377,9 +387,7 @@ body {
       }
       .content_more {
         margin-top: 20px;
-        font-family: $titleFont;
-        font-size: $paragraph;
-        letter-spacing: 1.5px;
+        font-weight: 400;
       }
       .content_more_skills {
         font-weight: 300;
